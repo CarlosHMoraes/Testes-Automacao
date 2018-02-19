@@ -81,11 +81,11 @@ end
 And ("as propriedades e valores contidos na resposta serão:") do |dados| 
     body = dados.to_json   
 
-    expect(@resposta.body['postId']).to eq body['postId']
-    expect(@resposta.body['id']).to eq body['id']
-    expect(@resposta.body['name']).to eq body['name']
-    expect(@resposta.body['email']).to eq body['email']
-    expect(@resposta.body['body']).to eq body['body']
+    expect(@resposta.['postId']).to eq body['postId']
+    expect(@resposta.['id']).to eq body['id']
+    expect(@resposta.['name']).to eq body['name']
+    expect(@resposta.['email']).to eq body['email']
+    expect(@resposta.['body']).to eq body['body']
 
 end
 
