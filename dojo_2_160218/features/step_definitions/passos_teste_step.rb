@@ -71,7 +71,11 @@ And(/^altera as informações$/) do
 end
 
 When(/^eu procurar uma tarefa por "<data_vencimento>"$/) do
-
+	#within(:xpath, '//tr[td[font[@class="futureTask" and contains(., "12/22/2018")]]]') do
+	within(:xpath, '//tr[td[@class="hidden-xs inlineEdit" and contains(., "12/22/2018")]]') do		
+		find('input.check').set(true)		
+	end
+	binding.pry 
 end
 
 And(/^ela for da minha "<equipe>"$/) do
