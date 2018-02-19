@@ -1,0 +1,5 @@
+teste:
+    criar_comentario:
+      name: 'Criando comentario via services'
+      email: 'teste2@inmetrics2.com.br'
+      body: 'Testando a criação de um novo comentário via services'
