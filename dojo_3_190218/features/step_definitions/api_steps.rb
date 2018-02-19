@@ -17,19 +17,6 @@ Então ("a resposta trará um total de {int} registros") do |quantidade|
     expect(@resposta.size).to eq(quantidade)
 end
 
-#Então ("o status code da resposta será {int}") do
-#    expect(@resposta.code).to eq(status_code)
-#end
-
-Quando (/^eu fizer a requisição de criação do comentário$/) do
-    repsonse = HTTParty.post("http://jsonplaceholder.typicode.com/comments/",
-    :body => {  'title' => 'titulo de teste Carlos',
-                'body' => 'cadastrando um comentário',
-                'userId' => '3'}.to_json,
-    :headers => {'Content-Type' => 'application/json'})
-    puts response.code
-end
-
 Então (/^valido o código de resposta para criação esperado$/) do
     expect(response.code).to eq 201
     puts "Validando o recebimento de resposta 201"
@@ -54,7 +41,7 @@ Quando("excluir o post número {string} do blog") do |id|
 end
 
 Quando(/^eu fizer a requisição de alteração de um comentário$/) do
-    response = HTTParty.put("http://jsonplaceholder.typicode.com/comments/101",
+    response = HTTParty.put("http://jsonplaceholder.typicode.com/comments/100",
     :body => { 'title' => 'testando minha alteração',
             'body' => 'realizando alteração',
             'userId' => '3'}.to_json,
@@ -67,3 +54,38 @@ Então(/^valido o código de resposta para alteração esperado$/) do
     puts "Validando o recebimento do código de resposta 200"
     puts response.body
 end
+
+Dado(/^que eu tenha acesso ao webservice$/) do
+    response = HTTParty.get("http://jsonplaceholder.typicode.com")
+    
+    puts response.code
+end
+
+
+Quando (/^eu cadastrar um novo comentário no blog usando os dados abaixo:$/) do |dados|
+    body = dados.to_json
+    @resposta = HTTParty.post("http://jsonplaceholder.typicode.com/comments/", :body => body)
+end
+
+Quando (/^eu buscar todos os comentários através da API$/) do
+    @resposta = HTTParty.get("http://jsonplaceholder.typicode.com/comments")
+    puts @resposta.body
+end
+
+Quando ("eu buscar pelo comentário {string} do meu blog atraés da API") do |comment|
+    @resposta = HTTParty.get("http://jsonplaceholder.typicode.com/comments/#{comment}")
+    
+    puts @resposta.body
+end
+
+And ("as propriedades e valores contidos na resposta serão:") do |dados| 
+    body = dados.to_json   
+
+    expect(@resposta.body['postId']).to eq body['postId']
+    expect(@resposta.body['id']).to eq body['id']
+    expect(@resposta.body['name']).to eq body['name']
+    expect(@resposta.body['email']).to eq body['email']
+    expect(@resposta.body['body']).to eq body['body']
+
+end
+
