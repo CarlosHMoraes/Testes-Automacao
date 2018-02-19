@@ -63,3 +63,18 @@ class Cadastro < SitePrism::Page
 
 end
 
+class PesquisaLinha < SitePrism::Page
+    def verifica_linha(data_p, assunto_p)        
+        #find(:xpath, "//*[@id='MassUpdate']/div[3]/table/tbody/tr[1]/td[7][contains(.,'#{data_p}')]/ancestor::tr[1]/td[4][contains(.,'#{assunto_p}')]/ancestor::tr[1]/td[1]/input").click        
+        find(:xpath, "//*[@id='MassUpdate']/div[3]/table/tbody/tr[1]/td[7][contains(.,'#{data_p}')]/ancestor::tr[1]/td[4][contains(.,'#{assunto_p}')]/ancestor::tr[1]/td[2]/a[contains(@class, 'edit-link')]").click
+    end
+
+    def acessa_linha() 
+        #find(:xpath, "//*[@id='MassUpdate']/div[3]/table/tbody/tr[1]/td[1]/input").should be_checked
+        #find(:xpath, "//*[@id='MassUpdate']/div[3]/table/tbody/tr[1]/td[1]/input").isSet
+        #find(:xpath, "//*[@id='MassUpdate']/div[3]/table/tbody/tr[1]/td[2]/a[contains(@class, 'edit-link')]").click
+        #//*[@id="MassUpdate"]/div[3]/table/tbody/tr[3]/td[2]
+    end
+    
+
+end
