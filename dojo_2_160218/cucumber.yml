@@ -1,0 +1,5 @@
+default: --no-source --color --format pretty
+
+meu_perfil_cadastro: -t @cenario_cadastro -f html -o teste1.html 
+
+meu_perfil_alteracao: -t @cenario_edicao -f html -o teste2.html 
