@@ -1,4 +1,6 @@
 Given(/^que o usuário esteja logado$/) do
+	
+    binding.pry
 	site = Site.new
 	site.load
 

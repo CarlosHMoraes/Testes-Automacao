@@ -18,7 +18,7 @@ Funcionalidade: Criar comentários
             E o status code da resposta será 201
 
     @criar_comentario_services
-    Cenáerio: Criar um novo comentário utilizando criar_comentario_services
+    Cenário: Criar um novo comentário utilizando criar_comentario_services
         Quando eu cadastrar um novo comentário utilizando services
         Então a resposta conterá a mensagem "Created"
             E o status code da resposta será 201

@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+ruby '2.4.3'
+
+gem 'rspec'
+gem 'calabash-android', '0.5.14'
+gem 'pry'
+gem 'pry-nav'

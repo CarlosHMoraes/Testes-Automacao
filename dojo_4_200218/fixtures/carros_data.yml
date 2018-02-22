@@ -1,0 +1,13 @@
+amb1:
+  carros:
+    modelo: "Gol/Volkswagen"
+    ano: 2016
+    placa: "EUB-1459"
+    km: "42000"
+    valor: "27.000"
+    
+    modelo: "Jetta Variant/Volkswagen"
+    ano: 2011
+    placa: "ABC-0021"
+    km: "452500"
+    valor: "51.000"    

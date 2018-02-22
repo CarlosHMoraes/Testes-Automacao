@@ -1,9 +1,10 @@
 Given(/^que o usuário esteja logado$/) do
+	binding.pry
 	site = Site.new
 	site.load
-
+	
 	logar = Logar.new
-	logar.log("will","will")	
+	logar.log("will","will")		
 end
 
 And(/^o usuário esteja na tela de tarefas$/) do
@@ -12,7 +13,8 @@ And(/^o usuário esteja na tela de tarefas$/) do
 end
 
 When(/^eu acessar a tela de cadastro$/) do
-	find('a', text: "Create Task").click	
+	#find('a', text: "Create Task").click	
+	Home.new.
 end
 
 And(/^preencher as informações da tarefa$/) do

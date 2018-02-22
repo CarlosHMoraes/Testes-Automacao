@@ -1,0 +1,50 @@
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk -t @cadastro
+calabash-android run ApkProvaCarros.apk -t @cadastro
+calabash-android run ApkProvaCarros.apk -t @cadastro
+calabash-android run ApkProvaCarros.apk -t @cadastro
+calabash-android run ApkProvaCarros.apk -t @cadastro
+adb devices
+exit
+reinstall_apps
+start_test_server_in_background
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk
+calabash-android Run ApkProvaCarros.apk
+calabash-android 
+calabash-android run
+calabash-android Run ApkProvaCarros.apk
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+bundle
+exit
+reinstall_apps
+start_test_server_in_background
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+calabash-android run ApkProvaCarros.apk -t @cadastrar
+exba
+exit
+reinstall_aps
+reinstall_apps
+start_test_server)in_background
+start_test_server_in_background
+exit
